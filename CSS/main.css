@@ -1,7 +1,7 @@
 .burger{
   max-width: 320px;
   min-height: auto;
- 
+ display: none;
 }
 
 .burger__wrapper--head{
@@ -89,12 +89,13 @@ transform: scale(1.1);
   margin-top: 40px;
   border: none;
   background-color: #ffffff;
-  transition: 0.5s;
+  transition: 0.9s;
 }
 
-.lang__button:hover{
+.lang__button:focus{
   background-image: linear-gradient(#511b53, #c430b0
 );
+transform: rotate(360deg);
 }
 /*====================================*/
 
@@ -108,6 +109,7 @@ transform: scale(1.1);
 
 .header {
   background-color: #ffffff;
+  display: none;
 }
 
 .header__inner {
@@ -144,6 +146,7 @@ transform: scale(1.1);
 .main {
   background-color: #f8f8f8;
   padding-top: 24px;
+  display: none;
 }
 .main__driver {
   width: 4px;
@@ -162,6 +165,9 @@ transform: scale(1.1);
   display: none;
 }
 
+.container__card--swipe{
+  display: flex;
+}
 /* Скролkkkkkkk*/
 
 .scrool {
@@ -215,8 +221,187 @@ transform: scale(1.1);
 }
 
 
+/*===========================================*/
+Свайпер
+/*===========================================*/
+
+.container__swiper{
+  width: 100%;
+}
+
+.container__swiper--title--text{
+  text-transform: uppercase;
+  line-height: 24px;
+  font-family: "TT Lakes Regular";
+  margin-bottom: 25px;
+  background: #ffffff;
+  color: #7e7e82;
+  margin-top: 16px;
+  margin-left: 16px;
+  @media (min-width: 768px) {
+    margin: 24px;
+  }
+  @media (min-width: 1120px) {
+    margin: 32px;
+    
+  }
+}
+
+.swiper {
+  padding: 24px 16px 0 16px;
+  padding-bottom: 46px;
+  background: #f8f5f5;
+  @media (min-width: 768px) {
+    margin: 0;
+    padding-bottom: 20px;
+  }
+}
 
 
+.swiper-wrapper{
+@media (min-width: 768px) {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 224px);
+    gap: 16px 24px;
+    margin-bottom: -4px;
+  }
+  @media (min-width: 964px) {
+    margin-bottom: 2px;
+  }
+  @media (min-width: 1120px) {
+    grid-template-columns: repeat(auto-fit, 240px);
+  }
+}
+
+
+.container__card--swiper{
+ 
+  height: 72px;
+  box-sizing: border-box;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+}
+
+.container__card--hidden-768{
+  @media (min-width: 750px) {
+    display: none;
+  }
+}
+.swiper-pagination{
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  border-radius: 0;
+  padding-bottom: 16px;
+  
+  @media (min-width: 768px){
+    display: none;
+  }
+}
+.swiper-pagination-bullet{
+  background: #B5B6BC;
+  width: 12px;
+  height: 12px;
+}
+
+
+.container__card--hidden{
+  height: 72px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  
+}
+.swiper-wrapper-hidden{
+  width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 224px);
+    gap: 16px 24px;
+    margin-top: 20px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+
+    @media (min-width: 1120px) {
+      margin-top: 16px;
+      grid-template-columns: repeat(4, 240px);
+      
+    }
+}
+.btn__ho {
+  display: flex;
+  padding-left: 24px;
+  margin-top: 20px;
+  
+  @media (max-width: 767px) {
+    display: none;
+  }
+  @media (min-width: 1120px) {
+    margin-left: 31px;
+  }
+
+  
+}
+.btn{
+  border: none;
+  background: #f8f5f5;
+  
+}
+
+.active {
+  transform: rotate(180deg);
+}
+.hidden {
+  display: none;
+}
+.container__card--hiddenx{
+  height: 72px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+
+  @media (min-width: 1025px) {
+  display: none;
+  
+}
+}
+.container__card--hidden-1120 {
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.container__card--hidden-1120x{
+  height: 72px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  border: 1px solid #eaeaea;
+  background: #fff;
+  
+}
+
+/*===========================================*/
 @media (min-width: 768px) {
   .header__menu {
     width: 180px;
@@ -260,7 +445,10 @@ transform: scale(1.1);
   .main__link {
     margin: 10px 0;
   }
+ 
 }
+
+
 
 @media (min-width: 1120px) {
   .header {
@@ -312,4 +500,3 @@ transform: scale(1.1);
     padding-left: 30px;
   }
 }
-
